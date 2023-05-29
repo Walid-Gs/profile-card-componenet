@@ -1,0 +1,116 @@
+:root {
+  /* primary colors */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /* neutral colors */
+  --dark-gray: hsl(0, 0%, 59%);
+
+  /* basic styles */
+  --primary-font: "Kumbh Sans", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primary-font);
+  height: 100vh;
+  background-color: var(--dark-cyan);
+  background: -50% -500px no-repeat url(/images/bg-pattern-top.svg),
+    150% -250% no-repeat url(/images/bg-pattern-bottom.svg), var(--dark-cyan);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-card {
+  width: 340px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.upper-part {
+  background-image: url(/images/bg-pattern-card.svg);
+  height: 140px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.lower-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.lower-part img {
+  border-radius: 50%;
+  border: 5px solid white;
+  position: absolute;
+  top: -48px;
+}
+
+.lower-part .profile-name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 5rem;
+  margin-bottom: 0.6rem;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.lower-part .profile-name span {
+  margin-left: 5px;
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+}
+.lower-part .location {
+  font-size: 16px;
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+}
+
+.lower-part .separation {
+  width: 100%;
+  border-top: 1px solid hsl(0, 3%, 86%);
+  margin: 1.6rem 0;
+}
+
+.lower-part .connections {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-around; */
+  margin-bottom: 2rem;
+}
+
+.connections .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2.7rem;
+}
+
+.container .number {
+  font-size: 18px;
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.container .title {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    background: 130% -500px no-repeat url(/images/bg-pattern-top.svg),
+      -20% -250% no-repeat url(/images/bg-pattern-bottom.svg), var(--dark-cyan);
+  }
+}
