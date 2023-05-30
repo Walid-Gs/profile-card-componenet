@@ -19,10 +19,12 @@
 
 body {
   font-family: var(--primary-font);
-  height: 100vh;
-  background-color: var(--dark-cyan);
-  background: -50% -500px no-repeat url(/images/bg-pattern-top.svg),
-    150% -250% no-repeat url(/images/bg-pattern-bottom.svg), var(--dark-cyan);
+   min-height: 100vh;
+  background: url(./images/bg-pattern-top.svg),
+    url(./images/bg-pattern-bottom.svg);
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+  background-repeat: no-repeat, no-repeat;
+  background-color: hsl(185deg, 75%, 39%);
   display: flex;
   justify-content: center;
   align-items: center;
